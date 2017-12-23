@@ -9,7 +9,7 @@ function randInt(min,max){
 //$.writeln(randInt(3, 6));
 
 var effectName = app.effects[randInt(0,100)].displayName;
-//$.writeln(effectName);
+$.writeln(effectName);
 
 {
     //create an undo group
@@ -30,16 +30,6 @@ var effectName = app.effects[randInt(0,100)].displayName;
     //check is that footage layer
     //if (curLayer.matchName == "ADBE AV Layer") {
         //add a slider and three keyframes
-        //var slider = curLayer.Effects.addProperty(effectName);
-        //var iterate = curLayer.property("Effects").isEffect;
-        curLayer.property("ADBE Effect Parade").addProperty("ADBE Fast Blur");
-        myEffect =  curLayer.property("ADBE Effect Parade").property("ADBE Fast Blur");
-        $.writeln(myEffect);
-        myEffect.property("ADBE Fast Blur-0001").addKey(randI);
-        myEffect.property("ADBE Fast Blur-0001").addKey(1);
-        //$.writeln(iterate);
-        //$.writeln(iterate.name);
-        for (var key in myEffect.property("ADBE Fast Blur-0001")) {$.writeln(key)}
-        //curLayer.property()
+        var slider = curLayer.Effects.addProperty(effectName)
     //}
 }

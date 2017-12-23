@@ -35,7 +35,7 @@ var effectName = app.effects[randInt(0,100)].displayName;
         curLayer.property("ADBE Effect Parade").addProperty("ADBE Fast Blur");
         myEffect =  curLayer.property("ADBE Effect Parade").property("ADBE Fast Blur");
         $.writeln(myEffect);
-        myEffect.property("ADBE Fast Blur-0001").addKey(randI);
+        myEffect.property("ADBE Fast Blur-0002").addKey(randInt (0, 10));
         myEffect.property("ADBE Fast Blur-0001").addKey(1);
         //$.writeln(iterate);
         //$.writeln(iterate.name);

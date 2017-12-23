@@ -86,4 +86,43 @@ var mask3 = layer.mask(3);
 mask3.moveTo(1); // move to th 1st pos
 alert(isValid(mask1)); //disp False
 
+//ExtendScript also Reflection and ReflectionInfo objects
+//Propreties eachentry is reflectinfo obj
+//Methods - eachentry is reflectinfo obj
+//Class name of ojb
+//"help" and "description"
+//Fin
 
+//Get effect name
+var effectDisplayName = app.effects[3].displayName;
+var effectName = app.effects[3].matchName; // this name not changing betw versions
+var effectName = app.effects[3].category; //
+$.writeln(effectName);
+
+app.effects
+
+//Duplicate layer
+app.project.item(index).layer(index).duplicate();
+
+myLayer.property("Effects").property("Box Blur");
+// Нужна такая штука которая проходит по свойствам эффекта и ставит некое значение между наименьшим и потолком этой функции
+// 
+
+myLayer.property("Effects").property("Box Blur")
+BlendingMode.ADD;
+
+app.project.item(index).layers.addShape();
+
+//Property group objects
+{
+var myProperty = myLayer.opacity
+}
+
+//getNameOfEffect
+var effect = curLayer.property("Effects").property(effectName);
+$.writeln(effect.name);
+
+myProperty = myLayer.property("Effects").property(effectName);
+
+myEffect = mySolid.property("ADBE Effect Parade").property("ADBE HUE SATURATION");
+myEffect.property("ADBE HUE SATURATION-0008").setValueAtTime(0,0)
