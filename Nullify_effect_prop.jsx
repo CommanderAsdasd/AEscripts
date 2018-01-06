@@ -22,11 +22,11 @@ function randInt(min,max){
         for (n=1; n <= fx.numProperties; n++) {
           s+= "\r" + fx.property(n).name;
           try {
-          fx.property(n).setValueAtTime(app.project.activeItem.time, randInt (1, 100));
+          fx.property(n).setValueAtTime(app.project.activeItem.time, 0);
           } catch(e) {
               $.writeln(e);
               try { 
-                  fx.property(n).setValueAtTime(app.project.activeItem.time, Math.random(0,1));
+                  fx.property(n).setValueAtTime(app.project.activeItem.time, 0);
                   } catch(e2) {
                       continue;
                     0}

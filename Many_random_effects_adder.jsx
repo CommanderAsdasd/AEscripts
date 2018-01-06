@@ -8,7 +8,7 @@ function randInt(min,max){
 
 //$.writeln(randInt(3, 6));
 
-var effectName = app.effects[randInt(0,400)].displayName;
+
 $.writeln(effectName);
 
 {
@@ -21,7 +21,7 @@ $.writeln(effectName);
     //check if comp is selected
     if (curItem == null || !(curItem instanceof CompItem)){
         // if no comp selected, display an alert
-        alert("Choose a comps");
+        alert("Choose a comp");
     }
 
     //define the layer in the loop we've currently looking at
@@ -30,6 +30,9 @@ $.writeln(effectName);
     //check is that footage layer
     //if (curLayer.matchName == "ADBE AV Layer") {
         //add a slider and three keyframes
-        var slider = curLayer.Effects.addProperty(effectName)
+        for (var i = 0; i < 5; i++) {
+        var effectName = app.effects[randInt(0,400)].displayName;
+        curLayer.Effects.addProperty(effectName)
+        }
     //}
 }
